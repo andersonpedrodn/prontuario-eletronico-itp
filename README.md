@@ -11,7 +11,7 @@ Período: 2025.2
 
 ## 💡 Projeto: Prontuário Eletrônico de Pacientes
 **Descrição**: Sistema interativo de linha de comando, desenvolvido em C, para o gerenciamento de informações básicas de pacientes. O programa permite ao usuário cadastrar novos pacientes (incluindo nome, idade e sintomas), listar todos os pacientes cadastrados e visualizar os detalhes completos de um paciente específico. Todos os dados são mantidos em memória durante a execução do programa.
-**Repositório**: [LINK] 
+**Repositório**: [https://github.com/andersonpedrodn/prontuario-eletronico-itp] 
 **Vídeo de apresentação**: [LINK] 
 
 ## Conceitos da **unidade 1**:
