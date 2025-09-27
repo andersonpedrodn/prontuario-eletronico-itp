@@ -1,7 +1,7 @@
 # ITP - Lista de Exercícios da Semana 3
 
 ## Estruturas Condicionais
-Este diretório contém as soluções para os 4 problemas da lista de exercícios da Semana 2.
+Este diretório contém as soluções para os 8 problemas da lista de exercícios da Semana 3.
 
 ### Problemas Resolvidos:
 - `problema1.c`: Classificação de IMC
