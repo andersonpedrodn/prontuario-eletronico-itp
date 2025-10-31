@@ -4,6 +4,7 @@ void cadastrarPacientes();
 void listarPacientes();
 void exibirMenu();
 void exibirDetalhePaciente();
+void buscarPacientePorNome();
 
 #define maxPacientes 50
 
@@ -33,6 +34,9 @@ int main()
             break;
         case 3:
             exibirDetalhePaciente();
+            break;
+        case 4:
+            buscarPacientePorNome();
             break;
         case 0:
             printf("\n-> Saindo do sistema... Ate mais! \n");
@@ -119,12 +123,55 @@ void exibirDetalhePaciente() {
 
 }
 
+void buscarPacientePorNome()
+{
+    char nomeBusca[100];
+    int i, encontrado = 0; // Flag para indicar se encontrou algum paciente
+
+    printf("\n--- Buscar Paciente por Nome ---\n");
+
+    //  Verifica se há pacientes para buscar
+    if (totalPacientes == 0)
+    {
+        printf("Nenhum paciente cadastrado. \n");
+        return; // Sai da função se não houver pacientes
+    }
+
+    // Solicita o nome a ser buscado
+    printf("Digite o nome do paciente para buscar: ");
+    fgets(nomeBusca, 100, stdin);
+    nomeBusca[strcspn(nomeBusca, "\n")] = 0; // Remove a nova linha do final da string
+
+    printf("\n Resultados da busca para '%s':\n", nomeBusca);
+
+    // Percorre a lista de pacientes e verifica se o nome contém a substring buscada
+    for (int i = 0; i < totalPacientes; i++)
+    {
+        if (strstr(nomes[i], nomeBusca) != NULL) //
+        {
+            printf("%d: %s, %d anos \n", i + 1, nomes[i], idades[i]);
+            printf("   Sintomas: %s\n", sintomas[i]);
+            printf("----------------------------------------\n");
+            encontrado = 1;
+        }
+    }
+
+    // Se nenhum paciente foi encontrado, informa ao usuário
+    if (!encontrado)
+    {
+        printf("Nenhum paciente encontrado com esse nome.\n");
+    }
+
+    printf("----------------------------------------\n");
+}
+
 void exibirMenu()
 {
     printf("\n---> PROTUARIO ELETRONICO <---\n");
     printf("1. Cadastrar NOVO paciente\n");
     printf("2. Listar pacientes\n");
     printf("3. Ver detalhes de um paciente\n");
+    printf("4. Buscar paciente por nome\n");
     printf("0. Sair\n");
     printf("----------------------------------------");
 }
