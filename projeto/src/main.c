@@ -73,6 +73,36 @@ void cadastrarPacientes()
         fgets(sintomas[totalPacientes], 500, stdin);
         sintomas[totalPacientes][strcspn(sintomas[totalPacientes], "\n")] = 0;
 
+        printf("\n--- Questionario de Saúde PHQ-9: ---\n"); 
+        printf("Nas ultimas 2 semanas, com que frequencia voce foi incomodado(a) por:"); 
+        printf("Responda: (0 = Nunca), (1 - Varios dias), (2 - Mais da metade dos dias), (3 - Quase todos os dias)\n "); 
+        int j; // Variavel para iterar sobre as questoes
+
+        char* perguntas_phq9[n_questoes] = {
+            "1. Pouco interesse ou prazer em fazer as coisas?",
+            "2. Sentir-se para baixo, deprimido ou sem esperancas?",
+            "3. Dificuldade para dormir ou dormir demais?",
+            "4. Sentir-se cansado ou com pouca energia?",
+            "5. Falta de apetite ou comer demais?",
+            "6. Sentir-se mal consigo mesmo(a) ou que voce e um fracasso?",
+            "7. Dificuldade de concentrar-se em coisas, como ler o jornal ou ver televisao?",
+            "8. Movimentar-se ou falar tao devagar que outras pessoas poderiam notar? Ou o contrario - estar agitado(a) ou inquieto(a)?",
+            "9. Pensamentos de que voce estaria melhor morto(a) ou de se ferir de alguma forma?"
+        };
+
+        for (j = 0; j < n_questoes; j++) {
+            int resposta;
+            do {
+                printf("%s ", perguntas_phq9[j]);
+                scanf("%d", &resposta);
+                if (resposta < 0 || resposta > 3) {
+                    printf("Resposta invalida. Por favor, responda com 0, 1, 2 ou 3.\n");
+                }
+            } while (resposta < 0 || resposta > 3);
+            phq9_respostas[totalPacientes][j] = resposta;
+        }
+
+
         totalPacientes++;
         printf("\n PACIENTE CADASTRADO COM SUCESSO! \n");
     }
