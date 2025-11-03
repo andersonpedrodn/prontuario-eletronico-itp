@@ -152,7 +152,29 @@ void exibirDetalhePaciente() {
         printf("Nome Completo: %s\n", nomes[indice]);
         printf("Idade: %d\n", idades[indice]);
         printf("Sintomas: %s\n", sintomas[indice]);
+        printf("\nRespostas do Questionario PHQ-9:\n");
+        int j;
+        int totalScore = 0;
+        for (j = 0; j < n_questoes; j++) {
+            printf("Pergunta %d: %d\n", j + 1, phq9_respostas[indice][j]);
+            totalScore += phq9_respostas[indice][j];
+        }
         printf("--------------------------------------------");
+        printf("\nScore Total do PHQ-9: %d\n", totalScore);
+
+        if (totalScore >= 20) {
+            printf("Recomenda-se procurar ajuda profissional imediatamente.\n");
+        } else if (totalScore >= 15) {
+            printf("Recomenda-se consultar um profissional de saude mental.\n");
+        } else if (totalScore >= 10) {
+            printf("Monitorar os sintomas e considerar buscar ajuda se persistirem.\n");
+        } else if (totalScore >= 5) {
+            printf("Ficar atento ao bem-estar emocional.\n");
+        } else {
+            printf("Nenhum indicativo significativo.\n");
+        }
+        printf("--------------------------------------------\n");
+        
     }else{
         printf("Numero de paciente invalido...");
     }
