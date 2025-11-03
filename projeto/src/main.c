@@ -5,6 +5,7 @@ void listarPacientes();
 void exibirMenu();
 void exibirDetalhePaciente();
 void buscarPacientePorNome();
+void verificacaoDuplicidade();
 
 #define maxPacientes 50
 
@@ -37,6 +38,9 @@ int main()
             break;
         case 4:
             buscarPacientePorNome();
+            break;
+        case 5:
+            verificacaoDuplicidade();
             break;
         case 0:
             printf("\n-> Saindo do sistema... Ate mais! \n");
@@ -165,6 +169,35 @@ void buscarPacientePorNome()
     printf("----------------------------------------\n");
 }
 
+// Função para verificar nomes duplicados
+void verificacaoDuplicidade() {
+    int i, j;
+    int duplicadosEncontrados = 0;
+
+    printf("\n--- Verificacao de Pacientes Duplicados ---\n");
+
+    //Validação de duplicidade de nomes
+    if (totalPacientes < 2) {
+        printf("Nao ha pacientes suficientes para verificar duplicidade.\n");
+        return;
+    }
+
+    for (i = 0; i < totalPacientes - 1; i++) {
+        for (j = i + 1; j < totalPacientes; j++) {
+            if (strcmp(nomes[i], nomes[j]) == 0) {
+                printf("Nome duplicado encontrado: %s (Indices: %d e %d)\n", nomes[i], i + 1, j + 1);
+                duplicadosEncontrados = 1;
+            }
+        }
+    }
+
+    if (!duplicadosEncontrados) {
+        printf("Nenhum nome duplicado encontrado.\n");
+    }
+
+    printf("----------------------------------------\n");
+}
+
 void exibirMenu()
 {
     printf("\n---> PROTUARIO ELETRONICO <---\n");
@@ -172,6 +205,7 @@ void exibirMenu()
     printf("2. Listar pacientes\n");
     printf("3. Ver detalhes de um paciente\n");
     printf("4. Buscar paciente por nome\n");
+    printf("5. Verificar nomes duplicados\n");
     printf("0. Sair\n");
     printf("----------------------------------------");
 }
