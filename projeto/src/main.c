@@ -7,12 +7,14 @@ void exibirDetalhePaciente();
 void buscarPacientePorNome();
 void verificacaoDuplicidade();
 
-#define maxPacientes 50
+#define maxPacientes 50 
+#define n_questoes 9 // Numero de questoes do PHQ-9
 
 char nomes[maxPacientes][100];
 int idades[maxPacientes];
 char sintomas[maxPacientes][500];
 int totalPacientes = 0;
+int phq9_respostas[maxPacientes][n_questoes]; // Matriz para armazenar respostas do PHQ-9
 
 int main()
 {
