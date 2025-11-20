@@ -1,24 +1,35 @@
-# Introdução a Técnicas de Programação  - Unidade 1 
+# Introdução a Técnicas de Programação  - Unidades 1 e 2 
 Aluno: Anderson Pedro do Nascimento 
 Matrícula: 20250052933
 Período: 2025.2
 
 ## 📁 Estrutura do Projeto
 
-- 'projeto/': Projeto principal da unidade (Prontuário Eletrônico)
-- 'lista': Contém as listas de exercícios, organizadas em subpastas por semana.
-- 'README.md': Arquivo de apresentação geral do projeto.
+- `projeto/`: Código-fonte do projeto "Prontuário Eletrônico de Pacientes".
+- `listas/`: Soluções das listas de exercícios (Semana 2 a Semana 10).
+- `relatorios/`: Relatórios técnicos das Unidades 1 e 2.
+- `videos/`: Links para os vídeos de demonstração.
+- `README.md`: Este arquivo.
 
-## 🚀 Projeto: Prontuário Eletrônico de Pacientes
+## 🚀 Projeto: Prontuário Eletrônico de Pacientes (Versão 2.0)
 **Descrição**: Sistema interativo de linha de comando, desenvolvido em C, para o gerenciamento de informações básicas de pacientes. O programa permite ao usuário cadastrar novos pacientes (incluindo nome, idade e sintomas), listar todos os pacientes cadastrados e visualizar os detalhes completos de um paciente específico. Todos os dados são mantidos em memória durante a execução do programa.
 **Repositório**: [https://github.com/andersonpedrodn/prontuario-eletronico-itp] 
-**Vídeo de apresentação**: [https://youtu.be/-nppav30AH4] 
+
+
+### 🎥 Demonstração
+**Vídeo Unidade 1:** [https://youtu.be/-nppav30AH4] 
+**Vídeo Unidade 2:** [https://youtu.be/] 
 
 ### Funcionalidades Implementadas:
-- Cadastro de novos pacientes, com leitura de nome, idade e sintomas.
-- Listagem de todos os pacientes cadastrados em memória.
-- Visualização dos detalhes completos de um paciente específico, selecionado por ID.
-- Menu interativo e contínuo com tratamento de entradas inválidas.
+- **Novos pacientes:**Cadastro de novos pacientes, com leitura de nome, idade e sintomas.
+- **Listagem:** Listagem de todos os pacientes cadastrados em memória.
+- **Visualização:** Visualização dos detalhes completos de um paciente específico, selecionado por ID.
+- **Menu:**Menu interativo e contínuo com tratamento de entradas inválidas.
+- **Cadastro Ilimitado (Alocação Dinâmica):** O sistema gerencia a memória automaticamente (`malloc`/`realloc`), expandindo a capacidade conforme novos pacientes são cadastrados, sem limites fixos.
+- **Busca por Nome (Strings):** Permite localizar pacientes rapidamente digitando parte do nome, utilizando manipulação de strings (`strstr`).
+- **Inventário de Saúde Mental (Matrizes):** Implementação do questionário PHQ-9, onde as respostas são armazenadas e processadas utilizando matrizes dinâmicas.
+- **Verificação de Duplicidade (Loops Aninhados):** Algoritmo que percorre a base de dados para identificar e alertar sobre cadastros com nomes idênticos.
+- **Gestão de Memória Segura:** Implementação rigorosa de `free()` para garantir que toda a memória alocada seja liberada ao encerrar o programa, evitando *memory leaks*.
 
 ## Conceitos da **unidade 1**:
 - **Estruturas condicionais:** `switch-case` para o controle do menu principal e `if-else` para validações de dados (limites, IDs inválidos, etc.).
@@ -30,35 +41,54 @@ Período: 2025.2
 
 O diretório `listas/` contém as soluções desenvolvidas. O status atual da resolução é o seguinte:
 ### Semana 2 - Variáveis, Tipos e Operadores:
-- ✅ Problema 1: Calculadora de IMC
-- ✅ Problema 2: Conversão de temperatura
-- ✅ Problema 3: Cálculo de juros compostos
-- ✅ Problema 4: Operações aritméticas básicas
+    ✅ Problema 1: Calculadora de IMC
+    ✅ Problema 2: Conversão de temperatura
+    ✅ Problema 3: Cálculo de juros compostos
+    ✅ Problema 4: Operações aritméticas básicas
 ### Semana 3 - Condicionais:
-- ✅ Problema 1: Classificação de IMC
-- ✅ Problema 2: Calculadora de energia elétrica
-- ✅ Problema 3: Sistema de notas
-- ✅ Problema 4: Pedra, papel, tesoura
-- ✅ Problema 5: Calculadora de desconto progressivo
-- ✅ Problema 6: Diagnóstico médico simples
-- ✅ Problema 7: Sistema de equações do 2º grau
-- ✅ Problema 8: Validador de triângulos
+    ✅ Problema 1: Classificação de IMC
+    ✅ Problema 2: Calculadora de energia elétrica
+    ✅ Problema 3: Sistema de notas
+    ✅ Problema 4: Pedra, papel, tesoura
+    ✅ Problema 5: Calculadora de desconto progressivo
+    ✅ Problema 6: Diagnóstico médico simples
+    ✅ Problema 7: Sistema de equações do 2º grau
+    ✅ Problema 8: Validador de triângulos
 ### Semana 4A - Repetições:
-- ✅ Problema 1: Dobrar folha
-- ❌ Problema 2: Homem Aranha
-- ❌ Problema 3: Números colegas
-- ❌ Problema 4: Jogo de dardos
+    ✅ Problema 1: Dobrar folha
+    ❌ Problema 2: Homem Aranha
+    ❌ Problema 3: Números colegas
+    ❌ Problema 4: Jogo de dardos
 ### Semana 4B - Análise e Padrões:
-- ❌ Questões 1-11: Pendentes
+    ❌ Questões 1-11: Pendentes
 ### Semana 5 - Funções (Parte 1):
-- ✅ Problema 1: Horários das rondas
-- ✅ Problema 2: Primos triplos
-- ❌ Problema 3: Pousando a sonda espacial
+    ✅ Problema 1: Horários das rondas
+    ✅ Problema 2: Primos triplos
+    ❌ Problema 3: Pousando a sonda espacial
 ### Semana 6 - Vetores:
-- ✅ Problema 1: MEC - Correção ENEM
-- ✅ Problema 2: Álbum de figurinhas
-- ✅ Problema 3: A construção da ponte
-- ❌ Problema 4: Em busca do tesouro perdido
+    ✅ Problema 1: MEC - Correção ENEM
+    ✅ Problema 2: Álbum de figurinhas
+    ✅ Problema 3: A construção da ponte
+    ❌ Problema 4: Em busca do tesouro perdido
+### Semana 7 - Strings:
+    ❌ Problema 1: Campo minado 1D
+    ❌ Problema 2: Detecção de placas
+    ❌ Problema 3: OpenMeet
+### Semana 8 - Repeticoes aninhadas:
+    ❌ Problema 1: Estou com sorte (ou não)
+    ❌ Problema 2: Os dias mais chuvosos
+    ❌ Problema 3: Esse sim é piloto
+### Semana 9 - Matrizes:
+    ❌ Problema 1: Campo Agrícola
+    ❌ Problema 2: Sugestão de amigos
+    ❌ Problema 3: Campeonato de empates
+    ❌ Problema 4: Uma pechincha
+### Semana 10 - Ponteiros:
+    ❌ Problema 1: Soma de Vetores 
+    ❌ Problema 2: Ocorrências no vetor 
+    ❌ Problema 3: Sopa de letrinhas 
+
+
 
 ## 🎯 Principais Aprendizados
 O principal aprendizado foi a aplicação prática de conceitos para criar um programa estruturado. A depuração de bugs reais, como o manuseio do buffer do teclado (`getchar`) e a gestão do estado com variáveis de controle (`totalPacientes`), foi uma experiência fundamental. O projeto também solidificou a importância da modularização de código com funções para a criação de software legível e de fácil manutenção.
