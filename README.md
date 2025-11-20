@@ -75,16 +75,16 @@ O diretório `listas/` contém as soluções desenvolvidas. O status atual da re
     ✅ Problema 2: Detecção de placas
     ✅ Problema 3: OpenMeet
 ### Semana 8 - Repeticoes aninhadas:
-    ❌ Problema 1: Estou com sorte (ou não)
+    ✅ Problema 1: Estou com sorte (ou não)
     ❌ Problema 2: Os dias mais chuvosos
     ❌ Problema 3: Esse sim é piloto
 ### Semana 9 - Matrizes:
-    ❌ Problema 1: Campo Agrícola
+    ✅ Problema 1: Campo Agrícola
     ❌ Problema 2: Sugestão de amigos
     ❌ Problema 3: Campeonato de empates
     ❌ Problema 4: Uma pechincha
 ### Semana 10 - Ponteiros:
-    ❌ Problema 1: Soma de Vetores 
+    ✅ Problema 1: Soma de Vetores 
     ❌ Problema 2: Ocorrências no vetor 
     ❌ Problema 3: Sopa de letrinhas 
 
