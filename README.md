@@ -71,9 +71,9 @@ O diretório `listas/` contém as soluções desenvolvidas. O status atual da re
     ✅ Problema 3: A construção da ponte
     ❌ Problema 4: Em busca do tesouro perdido
 ### Semana 7 - Strings:
-    ❌ Problema 1: Campo minado 1D
-    ❌ Problema 2: Detecção de placas
-    ❌ Problema 3: OpenMeet
+    ✅ Problema 1: Campo minado 1D
+    ✅ Problema 2: Detecção de placas
+    ✅ Problema 3: OpenMeet
 ### Semana 8 - Repeticoes aninhadas:
     ❌ Problema 1: Estou com sorte (ou não)
     ❌ Problema 2: Os dias mais chuvosos
