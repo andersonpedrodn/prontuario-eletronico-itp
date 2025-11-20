@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h> //Importação da biblioteca stdlib.h para uso do alocamento dinâmico     
+
 void cadastrarPacientes();
 void listarPacientes();
 void exibirMenu();
@@ -7,18 +9,33 @@ void exibirDetalhePaciente();
 void buscarPacientePorNome();
 void verificacaoDuplicidade();
 
-#define maxPacientes 50 
-#define n_questoes 9 // Numero de questoes do PHQ-9
 
-char nomes[maxPacientes][100];
-int idades[maxPacientes];
-char sintomas[maxPacientes][500];
+#define n_questoes 9 
+
+char **nomes;
+int *idades;
+char **sintomas;
+int **phq9_respostas; // Matriz para armazenar respostas do PHQ-9
+
 int totalPacientes = 0;
-int phq9_respostas[maxPacientes][n_questoes]; // Matriz para armazenar respostas do PHQ-9
+int capacidadeAtual = 2;
+
 
 int main()
 {
     int opcoes;
+    
+    // Alocação dinâmica inicial das estruturas de dados
+    nomes = (char**) malloc(capacidadeAtual * sizeof(char*));
+    idades = (int*) malloc(capacidadeAtual * sizeof(int));
+    sintomas = (char**) malloc(capacidadeAtual * sizeof(char*));
+    phq9_respostas = (int**) malloc(capacidadeAtual * sizeof(int*));
+
+    // Verificação de erro na alocação
+    if (nomes == NULL || idades == NULL || sintomas == NULL || phq9_respostas == NULL) { 
+        printf("Erro de alocacao de memoria!\n");
+        return 1; // Sai do programa com codigo de erro
+    }
 
     do
     {
@@ -53,13 +70,47 @@ int main()
 
     } while (opcoes != 0);
 
+    printf("\n Liberando memoria alocada...\n");
+    // Liberacao da memoria alocada dinamicamente
+    for (int i = 0; i < totalPacientes; i++)
+    {
+        free(nomes[i]);
+        free(sintomas[i]);
+        free(phq9_respostas[i]);
+    }
+    free(nomes);
+    free(idades);
+    free(sintomas);
+    free(phq9_respostas);
+
     return 0;
 }
 
 void cadastrarPacientes()
 {
-    if (totalPacientes < maxPacientes)
+    // Verifica se é necessário aumentar a capacidade dos arrays
+    if (totalPacientes >= capacidadeAtual)
     {
+        printf("\n[Sistema] Capacidade esgotada (%d). Expandindo memoria...\n", capacidadeAtual);
+        int novaCapacidade = capacidadeAtual * 2; // Dobra a capacidade
+
+        nomes = (char**) realloc(nomes, novaCapacidade * sizeof(char*));
+        idades = (int*) realloc(idades, novaCapacidade * sizeof(int));
+        sintomas = (char**) realloc(sintomas, novaCapacidade * sizeof(char*));
+        phq9_respostas = (int**) realloc(phq9_respostas, novaCapacidade * sizeof(int*));
+
+        if (nomes == NULL || idades == NULL || sintomas == NULL || phq9_respostas == NULL) {
+            printf("Erro ao expandir memoria!\n");
+            return; // Sai da função em caso de erro
+        }
+
+        capacidadeAtual = novaCapacidade;
+        printf("[Sistema] Memoria expandida para %d pacientes.\n", capacidadeAtual);
+    }
+        nomes[totalPacientes] = (char*) malloc(100 * sizeof(char));
+        sintomas[totalPacientes] = (char*) malloc(500 * sizeof(char));  
+        phq9_respostas[totalPacientes] = (int*) malloc(n_questoes * sizeof(int));
+
         printf("\n--- Cadastro de Novo Paciente ---\n");
         printf("Novo Paciente: ");
         fgets(nomes[totalPacientes], 100, stdin);
@@ -105,11 +156,7 @@ void cadastrarPacientes()
 
         totalPacientes++;
         printf("\n PACIENTE CADASTRADO COM SUCESSO! \n");
-    }
-    else
-    {
-        printf("\n Limite máximo de paciente atingidos!\n");
-    }
+    
 }
 
 void listarPacientes()
