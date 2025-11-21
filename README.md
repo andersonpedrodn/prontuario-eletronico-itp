@@ -125,7 +125,11 @@ Além da versão padrão para PC, este repositório possui uma **branch experime
 
 
 
-###GIF
+### <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/9845a354-c840-4d59-93b1-b1a2b955e96f" />
+
+
+
+
 ![Vídeo do WhatsApp de 2025-11-21 à(s) 12 29 22_1c4689cf](https://github.com/user-attachments/assets/e97a87f9-a082-4955-bd45-d5f63da64557)
 
 
