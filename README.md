@@ -109,6 +109,9 @@ O principal aprendizado foi a aplicação prática de conceitos para criar um pr
 
 ## 🔌 Versão Embarcada (BitDogLab / Raspberry Pi Pico)
 
+![placaBitDogLab](https://github.com/user-attachments/assets/c7de0803-fc93-4e2b-ae14-8133c5064b27)
+
+
 Além da versão padrão para PC, este repositório possui uma **branch experimental** dedicada a sistemas embarcados.
 
 - **Branch:** `versao-bitdoglab`
