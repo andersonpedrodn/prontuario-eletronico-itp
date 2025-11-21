@@ -121,16 +121,21 @@ Além da versão padrão para PC, este repositório possui uma **branch experime
   ```bash
   git checkout versao-bitdoglab
 
-## 📷 Funcionando 
+## 📷 Resultado na Placa
 
-![bitdoglabfoto](https://github.com/user-attachments/assets/a98aaf89-6517-4116-bfa9-b7a43dc64f80)
+Abaixo, o sistema rodando diretamente no hardware da **BitDogLab**.
 
+### 🛠️ Componentes em Uso:
+- **Display OLED (SSD1306):** Renderização de texto e gráficos via driver I2C customizado.
+- **LED RGB/SMD (GPIO 12):** Feedback visual de processamento (heartbeat).
+- **RP2040:** Gerenciamento de memória e lógica do prontuário.
 
+### 🎥 Demonstração
+![Vídeo do Funcionamento](https://github.com/user-attachments/assets/e97a87f9-a082-4955-bd45-d5f63da64557)
+*O GIF acima demonstra o "Modo Quiosque", onde a ficha de cada paciente é exibida por 3 segundos antes de alternar automaticamente.*
 
-## 🎥 GIF
-
-
-![Vídeo do WhatsApp de 2025-11-21 à(s) 12 29 22_1c4689cf](https://github.com/user-attachments/assets/e97a87f9-a082-4955-bd45-d5f63da64557)
+### 📸 Foto do Setup
+![Setup BitDogLab](https://github.com/user-attachments/assets/a98aaf89-6517-4116-bfa9-b7a43dc64f80)
 
 
 
