@@ -120,3 +120,14 @@ Além da versão padrão para PC, este repositório possui uma **branch experime
 - **Como acessar:**
   ```bash
   git checkout versao-bitdoglab
+
+![bitdoglabfoto](https://github.com/user-attachments/assets/a98aaf89-6517-4116-bfa9-b7a43dc64f80)
+
+
+
+###GIF
+![Vídeo do WhatsApp de 2025-11-21 à(s) 12 29 22_1c4689cf](https://github.com/user-attachments/assets/e97a87f9-a082-4955-bd45-d5f63da64557)
+
+
+
+  
