@@ -40,6 +40,12 @@ Período: 2025.2
 - **Vetores:** Utilização de vetores paralelos (`nomes`, `idades`, `sintomas`) para simular um banco de dados em memória.
 - **Funções:** O código foi modularizado em 5 funções (`main`, `exibirMenu`, `cadastrarPaciente`, `listarPacientes`, `verDetalhesPaciente`) com responsabilidades únicas para maior organização.
 
+## Conceitos da **Unidade 2**:
+- **Ponteiros e Alocação Dinâmica:** Substituição de vetores estáticos por ponteiros (`char **`, `int *`). Uso de `malloc` para alocação inicial, `realloc` para expansão automática da capacidade de armazenamento e `free` para liberação de memória (prevenção de *memory leaks*).
+- **Matrizes Dinâmicas:** Implementação de estruturas bidimensionais alocadas dinamicamente (`int **phq9_respostas`) para armazenar as respostas do questionário de saúde mental.
+- **Manipulação de Strings:** Utilização avançada da biblioteca `string.h`, aplicando a função `strstr` para implementar um sistema de busca parcial por nome.
+- **Estruturas de Repetição Aninhadas:** Aplicação de laços `for` aninhados (um dentro do outro) para realizar a verificação de duplicidade de registros na base de dados.
+
 ## 📚 Listas de Exercícios
 
 O diretório `listas/` contém as soluções desenvolvidas. O status atual da resolução é o seguinte:
@@ -100,3 +106,17 @@ O principal aprendizado foi a aplicação prática de conceitos para criar um pr
 - **SO**: Windows 
 - **Compilador**: GCC
 - **Editor**: Visual Studio Code
+
+## 🔌 Versão Embarcada (BitDogLab / Raspberry Pi Pico)
+
+![placaBitDogLab](https://github.com/user-attachments/assets/c7de0803-fc93-4e2b-ae14-8133c5064b27)
+
+
+Além da versão padrão para PC, este repositório possui uma **branch experimental** dedicada a sistemas embarcados.
+
+- **Branch:** `versao-bitdoglab`
+- **Hardware:** Placa de desenvolvimento BitDogLab (Raspberry Pi Pico / RP2040).
+- **Objetivo:** Adaptar o sistema de prontuário para funcionar em modo "Quiosque" (apenas leitura), utilizando o **Display OLED** da placa para visualizar os pacientes e os botões/joystick para navegação.
+- **Como acessar:**
+  ```bash
+  git checkout versao-bitdoglab
