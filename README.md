@@ -17,8 +17,8 @@ Período: 2025.2
 
 
 ### 🎥 Demonstração
-**Vídeo Unidade 1:** [https://youtu.be/-nppav30AH4] 
-**Vídeo Unidade 2:** [https://youtu.be/_09GL1MS_wo] 
+- **Vídeo Unidade 1:** [https://youtu.be/-nppav30AH4] 
+- **Vídeo Unidade 2:** [https://youtu.be/_09GL1MS_wo] 
 
 ### Funcionalidades Implementadas:
 - **Novos pacientes:**Cadastro de novos pacientes, com leitura de nome, idade e sintomas.
