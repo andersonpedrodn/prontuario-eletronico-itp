@@ -3,6 +3,9 @@ Aluno: Anderson Pedro do Nascimento
 Matrícula: 20250052933
 Período: 2025.2
 
+<img width="1207" height="332" alt="Captura de tela 2025-11-21 083553" src="https://github.com/user-attachments/assets/a5df051d-809c-4300-9121-7f2ac2681a60" />
+
+
 ## 📁 Estrutura do Projeto
 
 - `projeto/`: Código-fonte do projeto "Prontuário Eletrônico de Pacientes".
